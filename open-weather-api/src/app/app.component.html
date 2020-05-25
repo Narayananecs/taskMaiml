@@ -1,0 +1,215 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <!--<div class="row">
+    Dummy text
+  </div> -->
+  <!-- Image and text -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="assets/weather.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Weather Report 
+    </a>
+  </nav>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox1 = true">
+
+          <span class="card-title">{{cityName1?.name}} {{cityName1?.weather[0].main}} </span>
+          <span class="pull-right" (click)="showTextBox1 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel1Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox1">
+            <input type="text" #textbox1Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel1Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox1" type="submit" class="btn btn-primary"
+              (click)="getWeather(1,textbox1Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox2 = true">
+          <span class="card-title">{{cityName2?.name}} {{cityName2?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox2 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel2Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox2">
+            <input type="text" #textbox2Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel2Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox2" type="submit" class="btn btn-primary"
+              (click)="getWeather(2,textbox2Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox3 = true">
+          <span class="card-title">{{cityName3?.name}} {{cityName3?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox3 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel3Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox3">
+            <input type="text" #textbox3Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel3Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox3" type="submit" class="btn btn-primary"
+              (click)="getWeather(3,textbox3Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox4 = true">
+          <span class="card-title">{{cityName4?.name}} {{cityName4?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox4 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel4Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox4">
+            <input type="text" #textbox4Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel4Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox4" type="submit" class="btn btn-primary"
+              (click)="getWeather(4,textbox4Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox5 = true">
+          <span class="card-title">{{cityName5?.name}} {{cityName5?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox5 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel5Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox5">
+            <input type="text" #textbox5Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel5Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox5" type="submit" class="btn btn-primary"
+              (click)="getWeather(5,textbox5Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox6 = true">
+          <span class="card-title">{{cityName6?.name}} {{cityName6?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox6 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel6Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox6">
+            <input type="text" #textbox6Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel6Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox6" type="submit" class="btn btn-primary"
+              (click)="getWeather(6,textbox6Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox7 = true">
+          <span class="card-title">{{cityName7?.name}} {{cityName7?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox7 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel7Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox7">
+            <input type="text" #textbox7Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel7Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox7" type="submit" class="btn btn-primary"
+              (click)="getWeather(7,textbox7Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox8 = true">
+          <span class="card-title">{{cityName8?.name}} {{cityName8?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox8 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel8Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox8">
+            <input type="text" #textbox8Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel8Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox8" type="submit" class="btn btn-primary"
+              (click)="getWeather(8,textbox8Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body" (click)="showTextBox9 = true">
+          <span class="card-title">{{cityName9?.name}} {{cityName9?.weather[0].main}}</span>
+          <span class="pull-right" (click)="showTextBox9 = true">
+            <i class="fa fa-pencil"></i>
+          </span>
+          <p class="card-text">
+            <img [src]="pannel9Img" class="img-fluid" alt="Weather-icon">
+          </p>
+          <div class="form-group" *ngIf="showTextBox9">
+            <input type="text" #textbox9Value class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter city name">
+            <p *ngIf="pannel9Error" class="errorText">Invalid city name</p>
+            <br>
+            <button *ngIf="showTextBox9" type="submit" class="btn btn-primary"
+              (click)="getWeather(9,textbox9Value)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
